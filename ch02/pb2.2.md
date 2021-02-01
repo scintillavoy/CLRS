@@ -34,4 +34,4 @@ The for loop in lines 1-4 terminates when i becomes A.length. At that time, A[i.
 ---
 
 ## d
-The for loop in lines 2-4 iterates n-i time(s) for each iteration of the for loop in lines 1-4. Summation of n-i from i == 1 to n-1 is n(n-1)/2. Thus, the worst-case running time of bubblesort is &Theta;(n^2), which is the same as insertion sort.
+The for loop in lines 2-4 iterates n-i time(s) for each iteration of the for loop in lines 1-4. Summation of n-i from i == 1 to n-1 is n(n-1)/2. Thus, the worst-case running time of bubblesort is &Theta;(n<sup>2</sup>), which is the same as insertion sort.

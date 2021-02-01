@@ -14,7 +14,7 @@ for i = 0 to n
     P += val
 ```
 sum(i) (from i=0 to n) = n(n+1)/2  
-The running time is &Theta;(n^2).
+The running time is &Theta;(n<sup>2</sup>).
 
 ---
 

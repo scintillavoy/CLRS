@@ -2,11 +2,11 @@
 
 1. Original set S  
    S[1] S[2] ... S[n]
-2. Merge sort (nlgn)  
+2. Merge sort &rarr; O(nlgn)  
    S'[1] S'[2] ... S'[n]
-3. Multiply by -1 and add x (n)  
+3. Multiply by -1 and add x &rarr; O(n)  
    -S'[1]+x -S'[2]+x ... -S'[n]+x
-4. Binary search -S'[i]+x in S from i = 1 to n (nlgn)  
+4. Binary search -S'[i]+x in S from i = 1 to n &rarr; O(nlgn)  
    If found, there exist two elements in S whose sum is exactly x
 
 ## Solution 2 (more efficient)

@@ -42,7 +42,7 @@ void SelectionSort(It first, It last) {
  * Best-case: theta(n^2)
  * Worst-case: theta(n^2)
  * Outer loop: n-1
- * Inner loop: i from i = 1 to n-1 -> (n-1)n/2
+ * Inner loop: sum(i) (from i=1 to n-1) == (n-1)n/2
  */
 
 int main() {
