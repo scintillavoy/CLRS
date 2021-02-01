@@ -1,6 +1,6 @@
 ## a
 1 multiplication, 1 addition, 1 assignment for n+1 times  
-theta(n)
+&Theta;(n)
 
 ---
 
@@ -14,7 +14,7 @@ for i = 0 to n
     P += val
 ```
 sum(i) (from i=0 to n) = n(n+1)/2  
-The running time is theta(n^2).
+The running time is &Theta;(n^2).
 
 ---
 

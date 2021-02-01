@@ -9,7 +9,7 @@ An array with a descending order, <n, n-1, ..., 2, 1> has the most inversion. Th
 ---
 
 ## c
-The while loop in lines 5-7 swaps two adjacent elements if they consists an inversion and the inversion is gone away after swapping. The asymptotic running time of insertion sort depends on the number of iterations of the while loop. Thus, the running time of insertion sort is theta(n) when the number of inversions in the input array is n.
+The while loop in lines 5-7 swaps two adjacent elements if they consists an inversion and the inversion is gone away after swapping. The asymptotic running time of insertion sort depends on the number of iterations of the while loop. Thus, the running time of insertion sort is &Theta;(n) when the number of inversions in the input array is n.
 
 ---
 
