@@ -4,13 +4,13 @@ Sorting a list of length k with the insertion sort has time complexity of &Theta
 ---
 
 ## b
-| level   |                       | sum |
-|:-------:|:---------------------:|:---:|
-| 1       | cn                    | cn  |
-| 2       | cn/2 cn/2             | cn  |
-| 3       | cn/4 cn/4 cn/4 cn/4   | cn  |
-| ...     | ...                   | ... |
-| lg(n/k) | ck ... ck (n/k nodes) | cn  |
+| level    |                           | sum      |
+|:--------:|:-------------------------:|:--------:|
+| 1        | cn                        | cn       |
+| 2        | cn/2 cn/2                 | cn       |
+| 3        | cn/4 cn/4 cn/4 cn/4       | cn       |
+| &vellip; | &vellip;                  | &vellip; |
+| lg(n/k)  | ck &ctdot; ck (n/k nodes) | cn       |
 From the recursion tree above, there are lg(n/k) levels and each level costs cn. Combining them, merging takes time &Theta;(nlg(n/k)) in the worst case.
 
 ---

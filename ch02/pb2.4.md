@@ -4,7 +4,7 @@
 ---
 
 ## b
-An array with a descending order, <n, n-1, ..., 2, 1> has the most inversion. There are sum(i) (from i = n-1 to 0) = n(n-1)/2 inversions.
+An array with a descending order, <n, n-1, ..., 2, 1> has the most inversion. There are &Sigma;i (from i = n-1 to 0) = n(n-1)/2 inversions.
 
 ---
 
