@@ -1,0 +1,1 @@
+One worst case is when A is a min-heap and i is 1. Every call except for a leaf will trigger a recursive call because A[i] is always smaller than its children. Because the height of the heap is &lfloor;lgn&rfloor;, the worst-case running time is &Omega;(lgn)
