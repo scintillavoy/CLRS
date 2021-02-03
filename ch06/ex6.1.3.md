@@ -1,0 +1,1 @@
+A max-heap should satisfy the max-heap property. The child of the root of the subtree should be smaller than or equal to its parent. Recursively, the child of the child of the root of the subtree should follow this relationship. By transitivity, all the children of the root of the subtree should be smaller than or equal to the root of the subtree so it is the largest value.
