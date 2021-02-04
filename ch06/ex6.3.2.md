@@ -1,0 +1,1 @@
+MAX-HEAPIFY compares A[i] only with its children. If they are not the largest in their own subtrees, A[i] after calling MAX-HEAPIFY would not be the largest. By making the loop index i decrease from &lfloor;A.length/2&rfloor; to 1, we are guaranteed that the children of A[i] are the largest in their own subtrees.  
