@@ -1,0 +1,1 @@
+When all elements of array A have the same value, PARTITION always returns r as q so there are 0 and n-1 subproblems in the next level. From the recurrence T(n) = T(n-1) + &Theta;(n), the running time is &Theta;(n<sup>2</sup>).
