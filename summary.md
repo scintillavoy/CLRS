@@ -29,7 +29,7 @@
   - [](#)
 - [NP-Completeness](#np-completeness)
   - [](#)
-- [](#)
+- [Etc](#etc)
 
 # [Sorting](#contents)
 
@@ -107,7 +107,7 @@ MAX-HEAPIFY(A, i)                           // p154, O(lgn) = O(h)
     if r <= A.heap-size and A[r] > A[largest]
         largest = r
     if largest != i
-        exchange A[i] with A[largest]
+        exchange A[i] with A[largest]       // swap A[i] with its child
         MAX-HEAPIFY(A, largest)
 ```
 
@@ -129,15 +129,16 @@ constexpr void make_heap(RandomIt first, RandomIt last, Compare comp);
 
 ```C++
 HEAPSORT(A)                                 // p160, O(nlgn)
-    BUILD-MAX-HEAP(A)
-    for i = A.length downto 2
+    BUILD-MAX-HEAP(A)                       // O(n)
+    for i = A.length downto 2               // n-1 iterations
         exchange A[1] with A[i]
         A.heap-size = A.heap-size - 1
-        MAX-HEAPIFY(A, 1)
+        MAX-HEAPIFY(A, 1)                   // O(lgn)
 ```
 
 ```C++
 // sort_heap: O(nlgn)
+// [first, last) should be a heap
 #include <algorithm>
 template <class RandomIt>
 constexpr void sort_heap(RandomIt first, RandomIt last);
@@ -411,7 +412,7 @@ PRINT-PATH(G, s, v)                         // p601
         print s
     elseif v.π == NIL
         print "no path from" s "to" v "exists"
-    else PRINT-PATH(G, s, v, π)
+    else PRINT-PATH(G, s, v.π)
         print v
 ```
 
@@ -477,17 +478,17 @@ MST-KRUSKAL(G, w)                           // p631, O(ElgV)
 MST-PRIM(G, w, r)                           // p634
 // O(ElgV) with binary min-heap
 // O(E + VlgV) with Fibonacci heap
-    for each u ∈ G.V
+    for each u ∈ G.V                        // O(V)
         u.key = ∞
         u.π = NIL
     r.key = 0
     Q = G.V
-    while Q != EMPTY
+    while Q != EMPTY                        // O(V)
         u = EXTRACT-MIN(Q)
-        for each v ∈ G.Adj[u]
+        for each v ∈ G.Adj[u]               // O(E)
             if v ∈ Q and w(u, v) < v.key
                 v.π = u
-                v.key = w(u, v)
+                v.key = w(u, v)             // DECREASE-KEY
 ```
 
 ## [Single-Source Shortest Path](#contents)
@@ -536,16 +537,16 @@ DAG-SHORTEST-PATHS(G, w, s)                 // p655, O(V + E)
 DIJKSTRA(G, w, s)                           // p658
 // No negative-weight cycles
 // No negative-weight edges
-// O((V+E)lgV), O(ElgV) with binary mean-heap
+// O((V+E)lgV), O(ElgV) with binary min-heap
 // O(VlgV + E) with Fibonacci heap
     INITIALIZE-SINGLE-SOURCE(G, s)
     S = EMPTY
     Q = G.V
-    while Q != EMPTY
-        u = EXTRACT-MIN(Q)
+    while Q != EMPTY                        // O(V)
+        u = EXTRACT-MIN(Q)                  // O(lgV)
         S = S ∪ {u}
-        for each vertex v ∈ G.Adj[u]
-            RELAX(u, v, w)
+        for each vertex v ∈ G.Adj[u]        // O(E)
+            RELAX(u, v, w)                  // O(lgV)
 ```
 
 ## [All-Pairs Shortest Path](#contents)
@@ -641,3 +642,21 @@ JOHNSON(G, w)                               // p704
 # [Dynamic Programming](#contents)
 
 # [NP-Completeness](#contents)
+
+# [Etc](#contents)
+```C++
+// swap: O(1)
+#include <utility>
+template <class T>
+constexpr void swap(T& a, T& b) noexcept;
+```
+
+```C++
+// binary_search: O(lgn)
+// [first, last) must be at least partially ordered.
+#include <algorithm>
+template <class ForwardIt, class T>
+constexpr bool binary_search(ForwardIt first, ForwardIt last, const T& value);
+template <class ForwardIt, class T, class Compare>
+constexpr bool binary_search(ForwardIt first, ForwardIt last, const T& value, Compare comp);
+```
