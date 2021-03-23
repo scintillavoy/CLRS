@@ -653,10 +653,26 @@ constexpr void swap(T& a, T& b) noexcept;
 
 ```C++
 // binary_search: O(lgn)
-// [first, last) must be at least partially ordered.
+// A fully-sorted range can be used safely.
 #include <algorithm>
 template <class ForwardIt, class T>
 constexpr bool binary_search(ForwardIt first, ForwardIt last, const T& value);
 template <class ForwardIt, class T, class Compare>
 constexpr bool binary_search(ForwardIt first, ForwardIt last, const T& value, Compare comp);
+
+// lower_bound: O(lgn)
+// Find the first element >= value
+#include <algorithm>
+template <class ForwardIt, class T>
+constexpr ForwardIt lower_bound(ForwardIt first, ForwardIt last, const T& value);
+template <class ForwardIt, class T, clas Compare>
+constexpr ForwardIt lower_bound(ForwardIt, first, ForwardIt last, const T& value, Compare comp);
+
+// upper_bound: O(lgn)
+// Find the first element > value
+#include <algorithm>
+template <class ForwardIt, class T>
+constexpr ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value);
+template <class ForwardIt, class T, clas Compare>
+constexpr ForwardIt upper_bound(ForwardIt, first, ForwardIt last, const T& value, Compare comp);
 ```
