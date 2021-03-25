@@ -129,6 +129,7 @@ constexpr void make_heap(RandomIt first, RandomIt last, Compare comp);
 
 ```C++
 HEAPSORT(A)                                 // p160, O(nlgn)
+// It requires no additional space
     BUILD-MAX-HEAP(A)                       // O(n)
     for i = A.length downto 2               // n-1 iterations
         exchange A[1] with A[i]
