@@ -305,7 +305,8 @@ q.front() == v2;
 
 ```C++
 #include <queue>
-priority_queue<int> pq;
+priority_queue<int> pq;         // max heap
+priority_queue<int, vector<int>, greater<int>> pq2;  // min heap
 pq.empty() == true;             // O(1)
 pq.push(3);                     // O(lgn)
 pq.push(5);
@@ -649,6 +650,15 @@ JOHNSON(G, w)                               // p704
 #include <utility>
 template <class T>
 constexpr void swap(T& a, T& b) noexcept;
+```
+
+```C++
+// Function objects for comparison
+#include <functional>
+template <class T = void>
+struct greater;             // x > y
+template <class T = void>
+struct less;                // x < y
 ```
 
 ```C++
