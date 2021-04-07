@@ -326,8 +326,8 @@ fl.before_begin();              // O(1)
 fl.begin();                     // O(1)
 fl.end();                       // O(1)
 fl.empty() == true;             // O(1)
-fl.insert_after(it, v);         // O(1)
-fl.erase_after(it);             // O(1)
+fl.insert_after(it, v);         // O(1), returns iterator to the inserted element
+fl.erase_after(it);             // O(1), returns iterator to the element following the erased one
 fl.push_front(v);               // O(1)
 fl.pop_front();                 // O(1)
 ```
@@ -341,8 +341,8 @@ l.begin();                      // O(1)
 l.end();                        // O(1)
 l.empty();                      // O(1)
 l.size();                       // O(1)
-l.insert(it, v);                // O(1)
-l.erase(it);                    // O(1)
+l.insert(it, v);                // O(1), returns iterator pointing to the inserted value
+l.erase(it);                    // O(1), returns iterator following the last removed element
 l.push_back(v);                 // O(1)
 l.pop_back();                   // O(1)
 l.push_front(v);                // O(1)
@@ -695,7 +695,7 @@ constexpr bool binary_search(ForwardIt first, ForwardIt last, const T& value, Co
 #include <algorithm>
 template <class ForwardIt, class T>
 constexpr ForwardIt lower_bound(ForwardIt first, ForwardIt last, const T& value);
-template <class ForwardIt, class T, clas Compare>
+template <class ForwardIt, class T, class Compare>
 constexpr ForwardIt lower_bound(ForwardIt, first, ForwardIt last, const T& value, Compare comp);
 
 // upper_bound: O(lgn)
@@ -703,6 +703,6 @@ constexpr ForwardIt lower_bound(ForwardIt, first, ForwardIt last, const T& value
 #include <algorithm>
 template <class ForwardIt, class T>
 constexpr ForwardIt upper_bound(ForwardIt first, ForwardIt last, const T& value);
-template <class ForwardIt, class T, clas Compare>
+template <class ForwardIt, class T, class Compare>
 constexpr ForwardIt upper_bound(ForwardIt, first, ForwardIt last, const T& value, Compare comp);
 ```
