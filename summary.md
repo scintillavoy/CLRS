@@ -335,6 +335,18 @@ fl.pop_front();                 // O(1)
 ```C++
 #include <list>
 list<T> l;                      // doubly-linked list
+l.front();                      // O(1)
+l.back();                       // O(1)
+l.begin();                      // O(1)
+l.end();                        // O(1)
+l.empty();                      // O(1)
+l.size();                       // O(1)
+l.insert(it, v);                // O(1)
+l.erase(it);                    // O(1)
+l.push_back(v);                 // O(1)
+l.pop_back();                   // O(1)
+l.push_front(v);                // O(1)
+l.pop_front();                  // O(1)
 ```
 
 ## [Hash Table](#contents)
