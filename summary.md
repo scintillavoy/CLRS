@@ -675,6 +675,13 @@ struct less;                // x < y
 ```
 
 ```C++
+// Iterator operations
+#include <iterator>
+next(it, n=1);              // O(n)
+prev(it, n=1);              // O(n)
+```
+
+```C++
 // binary_search: O(lgn)
 // A fully-sorted range can be used safely.
 #include <algorithm>
