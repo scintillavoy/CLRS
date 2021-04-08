@@ -330,6 +330,10 @@ fl.insert_after(it, v);         // O(1), returns iterator to the inserted elemen
 fl.erase_after(it);             // O(1), returns iterator to the element following the erased one
 fl.push_front(v);               // O(1)
 fl.pop_front();                 // O(1)
+fl.merge(l2);                   // O(n), merges two sorted lists into one
+fl.splice_after(it, fl2);       // O(n), moves elements from another forward_list to *this
+fl.splice_after(it, fl2, it2);  // O(1)
+fl.splice_after(it, fl2, first, last);  // O(n)
 ```
 
 ```C++
@@ -347,6 +351,10 @@ l.push_back(v);                 // O(1)
 l.pop_back();                   // O(1)
 l.push_front(v);                // O(1)
 l.pop_front();                  // O(1)
+l.merge(l2);                    // O(n), merges two sorted lists into one
+l.splice(it, l2);               // O(1), transfers elements from one list to another
+l.splice(it, l2, it2);          // O(1)
+l.splice(it, l2, first, last);  // O(1) if two lists are the same object, O(n) otherwise
 ```
 
 ## [Hash Table](#contents)
