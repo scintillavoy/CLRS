@@ -467,6 +467,7 @@ DFS-VISIT(G, u)                             // p604
 ## [Topological Sort](#contents)
 ```C++
 TOPOLOGICAL-SORT(G)                         // p613, O(V + E)
+// G should be a directed acyclic graph
     call DFS(G) to compute finishing times v.f for each vertex v
     as each vertex is finished, insert it onto the front of a linked list
     return the linked list of vertices
