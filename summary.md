@@ -8,6 +8,7 @@
   - [Radix Sort](#radix-sort)
   - [Bucket Sort](#bucket-sort)
 - [Data Structure](#data-structure)
+  - [String](#string)
   - [Stack](#stack)
   - [Queue](#queue)
   - [Linked List](#linked-list)
@@ -276,6 +277,15 @@ BUCKET-SORT(A)                              // p201, O(n) on average
 ```
 
 # [Data Structure](#contents)
+
+## [String](#contents)
+```C++
+#include <string>
+string str("abcde");
+str.find("c", 0) == 2;          // O(A+B) (depends on the implementation)
+str.find("f") == string::npos;
+str.substr(1, 3) == "bcd";      // O(n)
+```
 
 ## [Stack](#contents)
 ```C++
