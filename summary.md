@@ -705,7 +705,7 @@ struct less;                // x < y
 template <class T1, class T2>
 struct pair;
 template <class T1, class T2>
-std::pair<T1, T2> make_pair<T1 t, T2 u);
+constexpr std::pair<T1, T2> make_pair(T1&& t, T2&& u);
 pair<int, int> point(3, 7);
 pair<int, int> point2 = make_pair(3, 7);
 point.first == 3;
