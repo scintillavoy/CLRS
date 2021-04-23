@@ -287,6 +287,12 @@ str.find("f") == string::npos;
 str.substr(1, 3) == "bcd";      // O(n)
 ```
 
+```C++
+#include <cctype>
+int tolower(int c);
+int toupper(int c);
+```
+
 ## [Stack](#contents)
 ```C++
 #include <stack>
@@ -691,6 +697,19 @@ template <class T = void>
 struct greater;             // x > y
 template <class T = void>
 struct less;                // x < y
+```
+
+```C++
+// pair
+#include <utility>
+template <class T1, class T2>
+struct pair;
+template <class T1, class T2>
+std::pair<T1, T2> make_pair<T1 t, T2 u);
+pair<int, int> point(3, 7);
+pair<int, int> point2 = make_pair(3, 7);
+point.first == 3;
+point.second == 7;
 ```
 
 ```C++
