@@ -380,6 +380,7 @@ unordered_set<K> us;
 us.begin();                     // O(1)
 us.end();                       // O(1)
 us.insert(v);                   // average: O(1), worst: O(n)
+us.erase(v);                    // average: O(1), worst: O(n)
 us.erase(it);                   // average: O(1), worst: O(n)
 us.count(v);                    // average: O(1), worst: O(n)
 unordered_multiset<K> ums;
@@ -391,6 +392,7 @@ unordered_map<K, T> um;
 um.begin();                     // O(1)
 um.end();                       // O(1)
 um.insert(v);                   // average: O(1), worst: O(n)
+um.erase(v);                    // average: O(1), worst: O(n)
 um.erase(it);                   // average: O(1), worst: O(n)
 um.count(v);                    // average: O(1), worst: O(n)
 unordered_multimap<K, T> umm;
@@ -403,6 +405,7 @@ set<K> s;                       // usually implemented as red-black trees
 s.begin();                      // O(1)
 s.end();                        // O(1)
 s.insert(v);                    // O(lgn)
+s.erase(v);                     // O(lgn)
 s.erase(it);                    // amortized: O(1)
 s.count(v);                     // O(lgn)
 multiset<K> ms;
@@ -414,6 +417,7 @@ map<K, T> m;                    // usually implemented as red-black trees
 m.begin();                      // O(1)
 m.end();                        // O(1)
 m.insert(v);                    // O(lgn)
+m.erase(v);                     // O(lgn)
 m.erase(it);                    // amortized: O(1)
 m.count(v);                     // O(lgn)
 multimap<K, T> mm;
